@@ -1,0 +1,97 @@
+[2022-07-29 02:53:29,672: INFO: task_1-2]: DATABASE CREATION....
+[2022-07-29 02:53:29,702: INFO: task_1-2]: DATABASE IS CREATED WITH NAME textile....
+[2022-07-29 02:53:29,702: INFO: task_1-2]: Creation of table Attribute DataSet....
+[2022-07-29 02:53:29,707: INFO: task_1-2]: You're connected to database:  ('textile',)
+[2022-07-29 02:53:29,707: INFO: task_1-2]: Creating table with name attribute_dataset....
+[2022-07-29 02:53:29,762: INFO: task_1-2]: Table is created with table name attribute_dataset....
+[2022-07-29 02:53:30,488: INFO: task_1-2]: Attribute DataSet:       Dress_ID    Style    Price  ...  Decoration Pattern_Type Recommendation
+0    1006032852     Sexy      Low  ...     ruffles       animal              1
+1    1212192089   Casual      Low  ...     ruffles       animal              0
+2    1190380701  vintage     High  ...        None        print              0
+3     966005983    Brief  Average  ...  embroidary        print              1
+4     876339541     cute      Low  ...         bow          dot              0
+..          ...      ...      ...  ...         ...          ...            ...
+495   713391965   Casual      Low  ...        None        solid              1
+496   722565148     Sexy      Low  ...        None         None              0
+497   532874347   Casual  Average  ...        lace        solid              1
+498   655464934   Casual  Average  ...    applique        print              1
+499   919930954   Casual      Low  ...        lace        solid              0
+
+[500 rows x 14 columns] 
+[2022-07-29 02:53:30,501: INFO: task_1-2]: Creation of table Dress_Sales....
+[2022-07-29 02:53:30,506: INFO: task_1-2]: You're connected to database:  ('textile',)
+[2022-07-29 02:53:30,506: INFO: task_1-2]: Creating table with name dress_sales....
+[2022-07-29 02:53:30,552: INFO: task_1-2]: Table is created with table name dress_sales....
+[2022-07-29 02:53:30,905: INFO: task_1-2]: Dress Sales Dataset:       Dress_ID 29-8-2013 31-8-2013  ... 10-8-2010 10-10-2013 10-12-2013
+0    1006032852      2114      2274  ...    3923.0     3985.0       4048
+1    1212192089       151       275  ...    4024.0     4125.0       4277
+2    1190380701         6         7  ...      11.0       11.0         11
+3     966005983      1005      1128  ...    1955.0     1959.0       1963
+4     876339541       996      1175  ...    2614.0     2693.0       2736
+..          ...       ...       ...  ...       ...        ...        ...
+495   713391965         0         0  ...     382.0      384.0        285
+496   722565148         0         0  ...     913.0      919.0        931
+497   532874347         0         0  ...     546.0      535.0        520
+498   655464934         0         0  ...     249.0      249.0        248
+499   919930954         0         0  ...     668.0      674.0        680
+
+[500 rows x 24 columns] 
+[2022-07-29 02:54:00,348: INFO: tasks_3_to_10]: Read dataset as a dataframe....
+[2022-07-29 02:54:00,453: INFO: tasks_3_to_10]: Convert to json file
+[2022-07-29 02:54:00,548: INFO: tasks_3_to_10]: A json file created in the F drive with the file name is Attribute_DataSet.json
+[2022-07-29 02:54:00,580: INFO: tasks_3_to_10]: JSON file...       Dress_ID    Style    Price  ...  Decoration Pattern Type Recommendation
+0    1006032852     Sexy      Low  ...     ruffles       animal              1
+1    1212192089   Casual      Low  ...     ruffles       animal              0
+2    1190380701  vintage     High  ...        None        print              0
+3     966005983    Brief  Average  ...  embroidary        print              1
+4     876339541     cute      Low  ...         bow          dot              0
+..          ...      ...      ...  ...         ...          ...            ...
+495   713391965   Casual      Low  ...        None        solid              1
+496   722565148     Sexy      Low  ...        None         None              0
+497   532874347   Casual  Average  ...        lace        solid              1
+498   655464934   Casual  Average  ...    applique        print              1
+499   919930954   Casual      Low  ...        lace        solid              0
+
+[500 rows x 14 columns]
+[2022-07-29 02:54:00,580: INFO: tasks_3_to_10]: File inserted into MongoDB Tables.....
+[2022-07-29 02:54:00,689: INFO: tasks_3_to_10]: Data frame for Attribute_DataSet....       Dress_ID    Style    Price  ...  Decoration Pattern Type Recommendation
+0    1006032852     Sexy      Low  ...     ruffles       animal              1
+1    1212192089   Casual      Low  ...     ruffles       animal              0
+2    1190380701  vintage     High  ...         NaN        print              0
+3     966005983    Brief  Average  ...  embroidary        print              1
+4     876339541     cute      Low  ...         bow          dot              0
+..          ...      ...      ...  ...         ...          ...            ...
+495   713391965   Casual      Low  ...         NaN        solid              1
+496   722565148     Sexy      Low  ...         NaN          NaN              0
+497   532874347   Casual  Average  ...        lace        solid              1
+498   655464934   Casual  Average  ...    applique        print              1
+499   919930954   Casual      Low  ...        lace        solid              0
+
+[500 rows x 14 columns]
+[2022-07-29 02:54:00,689: INFO: tasks_3_to_10]: You're connecting to mongoDB....
+[2022-07-29 02:54:00,882: INFO: tasks_3_to_10]: A table created into mongoDB....
+[2022-07-29 02:54:21,337: INFO: tasks_3_to_10]: Performing left join operation with Attribute dataset and dress dataset on column Dress_ID....
+[2022-07-29 02:54:21,349: INFO: tasks_3_to_10]: You're connected to database:  ('textile',)
+[2022-07-29 02:54:21,381: INFO: tasks_3_to_10]: finding how many unique dress that we have based on Dress_ID....
+[2022-07-29 02:54:21,390: INFO: tasks_3_to_10]: Finding how many dress is having recommendation as 0....
+[2022-07-29 02:54:21,396: INFO: tasks_3_to_10]:  finding  total dress sales for each and every Dress_ID and third highest most selling Dress_ID....
+[2022-07-29 02:54:21,545: INFO: tasks_3_to_10]: Table with total sales for individual dress id....       Dress_ID 29-8-2013 31-8-2013  ... 10-10-2013 10-12-2013         Sum
+0    1006032852      2114      2274  ...     3985.0       4048  1006032852
+1    1212192089       151       275  ...     4125.0       4277  1212192089
+2    1190380701         6         7  ...       11.0         11  1190380701
+3     966005983      1005      1128  ...     1959.0       1963   966005983
+4     876339541       996      1175  ...     2693.0       2736   876339541
+..          ...       ...       ...  ...        ...        ...         ...
+495   713391965         0         0  ...      384.0        285   713391965
+496   722565148         0         0  ...      919.0        931   722565148
+497   532874347         0         0  ...      535.0        520   532874347
+498   655464934         0         0  ...      249.0        248   655464934
+499   919930954         0         0  ...      674.0        680   919930954
+
+[500 rows x 25 columns]
+[2022-07-29 02:54:21,546: INFO: tasks_3_to_10]: First three highest sales id's with total : 464    1253973206
+392    1250787559
+443    1249825438
+Name: Sum, dtype: int64
+[2022-07-29 02:54:21,546: INFO: tasks_3_to_10]: Third highest dress sale total is : 443
+[2022-07-29 02:54:21,546: INFO: tasks_3_to_10]: Third highest dress sale dress id is : 1249825438

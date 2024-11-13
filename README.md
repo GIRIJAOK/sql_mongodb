@@ -6,14 +6,11 @@ The content in this repository includes practical demonstrations of CRUD operati
 
 ## Table of Contents
 
-- [Project Overview](#project-overview)
+- [Overview](#Overview)
 - [Key Features](#key-features)
 - [SQL Examples](#sql-examples)
 - [MongoDB Examples](#mongodb-examples)
 - [Installation](#installation)
-- [How to Use](#how-to-use)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
